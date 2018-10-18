@@ -1,8 +1,8 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import * as http from 'http';
+import * as url from 'url';
 
-async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
-}
-bootstrap();
+const server = http.createServer((req, res) => {
+  const parsedUrl = url.parse(req.url, true);
+});
+
+server.listen(3000, () => console.log(`Listen on port 3000`));
