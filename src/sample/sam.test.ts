@@ -4,6 +4,6 @@ jest.mock('./promise.ts');
 describe('Sample test', () => {
   it('should pass', async () => {
     const data = await hello();
-    expect(data).toBe(10);
+    expect(data).toBe(17);
   });
 });
